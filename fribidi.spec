@@ -5,7 +5,7 @@
 #
 Name     : fribidi
 Version  : 1.0.13
-Release  : 20
+Release  : 21
 URL      : https://github.com/fribidi/fribidi/releases/download/v1.0.13/fribidi-1.0.13.tar.xz
 Source0  : https://github.com/fribidi/fribidi/releases/download/v1.0.13/fribidi-1.0.13.tar.xz
 Summary  : Unicode Bidirectional Algorithm Library
@@ -103,7 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684266909
+export SOURCE_DATE_EPOCH=1685505109
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -146,7 +146,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1684266909
+export SOURCE_DATE_EPOCH=1685505109
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fribidi
 cp %{_builddir}/fribidi-%{version}/COPYING %{buildroot}/usr/share/package-licenses/fribidi/597bf5f9c0904bd6c48ac3a3527685818d11246d || :
@@ -181,7 +181,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libfribidi.so
 /usr/include/fribidi/fribidi-arabic.h
 /usr/include/fribidi/fribidi-begindecls.h
 /usr/include/fribidi/fribidi-bidi-types-list.h
@@ -246,7 +245,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libfribidi.so.0
 /V3/usr/lib64/libfribidi.so.0.4.0
 /usr/lib64/libfribidi.so.0
 /usr/lib64/libfribidi.so.0.4.0
